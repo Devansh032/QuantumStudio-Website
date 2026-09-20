@@ -1,7 +1,7 @@
 # Dependency security decision: serialize-javascript
 
-Decision date: 20 September 2026  
-Required review date: 20 December 2026  
+Decision date: 20 September 2026
+Required review date: 20 December 2026
 Status: high-severity advisory remediated by a narrow lockfile override; maintainer review remains required.
 
 ## Advisory and evidence
