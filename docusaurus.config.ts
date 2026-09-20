@@ -14,6 +14,12 @@ const config: Config = {
   projectName: 'QuantumStudio-Website',
   trailingSlash: false,
   onBrokenLinks: 'throw',
+  customFields: {
+    // The site key is public by design. Secrets are available only to Pages
+    // Functions through Cloudflare bindings and must never appear here.
+    turnstileSiteKey: process.env.TURNSTILE_SITE_KEY ?? '',
+    turnstileTestMode: process.env.BETA_TURNSTILE_TEST_MODE === 'true',
+  },
   markdown: {mermaid: true, hooks: {onBrokenMarkdownLinks: 'warn'}},
   stylesheets: ['https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css'],
   themes: ['@docusaurus/theme-mermaid'],
