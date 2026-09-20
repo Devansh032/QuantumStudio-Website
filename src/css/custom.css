@@ -1,0 +1,74 @@
+:root {
+  --ifm-color-primary: #47c9ff;
+  --ifm-color-primary-dark: #25beff;
+  --ifm-color-primary-darker: #14baff;
+  --ifm-color-primary-darkest: #0099db;
+  --ifm-color-primary-light: #69d4ff;
+  --ifm-color-primary-lighter: #7ad8ff;
+  --ifm-color-primary-lightest: #ade8ff;
+  --ifm-background-color: #0d1015;
+  --ifm-background-surface-color: #11151b;
+  --ifm-navbar-background-color: rgba(13, 16, 21, .92);
+  --ifm-footer-background-color: #090b0f;
+  --ifm-font-family-base: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ifm-font-family-monospace: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --ifm-heading-font-weight: 600;
+  --ifm-code-font-size: 92%;
+  --qs-cyan: #47c9ff;
+  --qs-text: #f1f5f8;
+  --qs-text-2: #9ca7b4;
+  --qs-text-3: #687483;
+  --qs-border: #20262f;
+  --qs-border-strong: #303844;
+}
+
+html[data-theme='dark'] {
+  --ifm-background-color: #0d1015;
+  --ifm-background-surface-color: #11151b;
+  --ifm-navbar-background-color: rgba(13, 16, 21, .94);
+  --ifm-font-color-base: #dce3ea;
+  --ifm-heading-color: #f5f8fb;
+  --ifm-toc-border-color: #242b35;
+  --ifm-color-emphasis-200: #242b35;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--ifm-background-color); }
+
+.navbar {
+  height: 4rem;
+  border-bottom: 1px solid var(--qs-border);
+  box-shadow: none;
+  backdrop-filter: blur(16px);
+}
+
+.navbar__brand { margin-right: 2rem; }
+.navbar__logo { height: 1.65rem; margin-right: .7rem; }
+.navbar__title { font-weight: 720; letter-spacing: -.02em; }
+.navbar__item { font-size: .86rem; }
+.navbar__link:hover, .navbar__link--active { color: var(--qs-cyan); }
+
+.footer { border-top: 1px solid var(--qs-border); }
+.footer__title { color: var(--qs-text); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; }
+.footer__link-item { color: var(--qs-text-2); font-size: .84rem; }
+.footer__copyright { color: var(--qs-text-3); font-size: .75rem; }
+
+.theme-doc-sidebar-container { border-right-color: var(--qs-border) !important; }
+.table-of-contents { border-left-color: var(--qs-border); }
+.table-of-contents__link { color: var(--qs-text-3); }
+.table-of-contents__link--active, .table-of-contents__link:hover { color: var(--qs-cyan); }
+.menu__link { font-size: .86rem; border-radius: .35rem; }
+.menu__link--active:not(.menu__link--sublist) { background: rgba(71,201,255,.08); }
+
+.markdown > h1:first-child { font-size: clamp(2.5rem, 5vw, 4.2rem); letter-spacing: -.05em; }
+.markdown h2 { margin-top: 2.7rem; letter-spacing: -.025em; }
+.markdown p, .markdown li { line-height: 1.75; }
+.markdown code { border: 1px solid var(--qs-border); }
+
+.alert { border-radius: .5rem; border-width: 1px; background: rgba(255,255,255,.02); }
+
+@media (max-width: 996px) {
+  .navbar__items--right .navbar__item { display: none; }
+}
+
+@import './professor-mvp.css';
