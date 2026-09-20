@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Quantum Studio',
   tagline: 'Atomistic and electronic-structure research',
-  favicon: 'img/brand/favicon.svg',
+  favicon: 'img/brand/quantum-studio-v0.1.svg',
   url: 'https://kalapatapubhargava.github.io',
   baseUrl: '/QuantumStudio-Website/',
   organizationName: 'kalapatapubhargava',
@@ -26,15 +26,20 @@ const config: Config = {
   presets: [['classic', {docs: {sidebarPath: './sidebars.ts', routeBasePath: 'docs', showLastUpdateAuthor: false, showLastUpdateTime: false, remarkPlugins: [remarkMath], rehypePlugins: [rehypeKatex]}, blog: false, theme: {customCss: './src/css/custom.css'}} satisfies Preset.Options]],
   themeConfig: {
     image: 'img/brand/social-card.svg',
-    colorMode: {defaultMode: 'dark', disableSwitch: true, respectPrefersColorScheme: false},
-    navbar: {title: 'Quantum Studio', logo: {alt: 'Quantum Studio', src: 'img/brand/favicon.svg'}, items: [
-      {to: '/', label: 'Home', position: 'left'}, {to: '/capabilities', label: 'Capabilities', position: 'left'}, {to: '/calculations', label: 'Calculation Catalogue', position: 'left'}, {to: '/applications', label: 'Applications', position: 'left'}, {to: '/resources', label: 'Resources', position: 'left'}, {to: '/documentation', label: 'Documentation', position: 'left'}, {to: '/technical-preview', label: 'Technical Preview', position: 'right'}, {to: '/beta-access', label: 'Request Beta Access', position: 'right'},
+    colorMode: {defaultMode: 'light', disableSwitch: true, respectPrefersColorScheme: false},
+    navbar: {title: 'Quantum Studio', logo: {alt: 'Quantum Studio', src: 'img/brand/quantum-studio-v0.1.svg'}, items: [
+      {to: '/capabilities', label: 'Capabilities', position: 'left'},
+      {to: '/applications', label: 'Applications', position: 'left'},
+      {to: '/documentation', label: 'Documentation', position: 'left'},
+      {to: '/technical-preview', label: 'Technical Preview', position: 'left'},
+      {to: '/contact', label: 'Research Collaboration', position: 'left'},
+      {to: '/beta-access', label: 'Request Beta Access', position: 'right', className: 'navbar__beta-action'},
     ]},
-    footer: {style: 'dark', links: [
-      {title: 'Explore', items: [{label: 'Capabilities', to: '/capabilities'}, {label: 'Calculation Catalogue', to: '/calculations'}, {label: 'Applications', to: '/applications'}, {label: 'Technical Preview', to: '/technical-preview'}]},
-      {title: 'Documentation', items: [{label: 'Overview', to: '/documentation'}, {label: 'Installation', to: '/docs/getting-started/installation'}, {label: 'Tutorial', to: '/docs/tutorials/silicon-scf'}, {label: 'Troubleshooting', to: '/docs/troubleshooting'}]},
-      {title: 'Beta access', items: [{label: 'Request access', to: '/beta-access'}, {label: 'Temporary licences', to: '/temporary-licence'}, {label: 'Privacy notice', to: '/privacy'}, {label: 'Beta terms', to: '/beta-terms'}, {label: 'Research collaboration', to: '/contact'}]},
-    ], copyright: `Copyright © ${new Date().getFullYear()} Quantum Studio. Controlled technical beta materials.`},
+    footer: {style: 'light', links: [
+      {title: 'Quantum Studio', items: [{label: 'Capabilities', to: '/capabilities'}, {label: 'Applications', to: '/applications'}, {label: 'Technical Preview', to: '/technical-preview'}]},
+      {title: 'Documentation', items: [{label: 'Overview', to: '/documentation'}, {label: 'Calculation Catalogue', to: '/calculations'}, {label: 'Troubleshooting', to: '/docs/troubleshooting'}]},
+      {title: 'Beta', items: [{label: 'Request Beta Access', to: '/beta-access'}, {label: 'Privacy', to: '/privacy'}, {label: 'Beta Terms', to: '/beta-terms'}, {label: 'Research Collaboration', to: '/contact'}]},
+    ], copyright: `Copyright © ${new Date().getFullYear()} Quantum Studio. Controlled technical beta; not a public production release.`},
     prism: {theme: prismThemes.github, darkTheme: prismThemes.dracula, additionalLanguages: ['bash', 'python', 'json']},
   } satisfies Preset.ThemeConfig,
 };

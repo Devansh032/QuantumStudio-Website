@@ -74,4 +74,4 @@ This is intentionally structured for long scientific tutorials and versionable u
 
 ## Brand assets
 
-The current SVG mark in `static/img/brand/` is a temporary web-safe placeholder. Replace it with the approved Quantum Studio logo before public launch.
+`static/img/brand/quantum-studio-v0.1.svg` is the canonical Quantum Studio SVG copied from the application repository for this website. Keep the original application asset unchanged; do not redraw, recolour, or rasterize the mark.
